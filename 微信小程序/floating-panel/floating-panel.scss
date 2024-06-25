@@ -1,0 +1,28 @@
+/* components/floating-panel/floating-panel.wxss */
+.floatingComponent {
+    position: fixed;
+    z-index: 9;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 32rpx 32rpx 0 0;
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;
+    width: calc(100vw - 48rpx);
+    margin-left: 24rpx;
+}
+
+.header {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-bar {
+    height: 10rpx;
+    width: 60rpx;
+    border-radius: 8rpx;
+    background: #c8c9cc;
+}

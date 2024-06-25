@@ -1,0 +1,14 @@
+<!--components/floating-panel/floating-panel.wxml-->
+<view
+	class="floatingComponent"
+	bindtouchstart="onStart"
+	bindtouchmove="onMove"
+	bindtouchend="onEnd"
+	data-touch-id="{{ touchId }}"
+    style="top: {{top}}rpx;"
+>
+	<view class="header">
+		<view class="header-bar"></view>
+	</view>
+	<slot></slot>
+</view>
