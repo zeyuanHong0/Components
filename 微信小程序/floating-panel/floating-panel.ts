@@ -46,14 +46,22 @@ Component({
         .exec();
     },
     onMove(e: any) {
+      const systemInfo = wx.getSystemInfoSync();
+      const windowHeight = systemInfo.windowHeight;
+      const windowWidth = systemInfo.windowWidth;
+      const heightRpx = windowHeight * (750 / windowWidth);
       const touch = e.touches[0];
+      // 检查触摸点是否匹配
       if (touch.identifier !== this.data.touchId) return;
-      const height = wx.getSystemInfoSync().windowHeight;
+      // 计算 Y 轴的偏移量
       const y = touch.clientY - this.data.fTop;
-      console.log(y, height);
-      if (y > 100 && y < height - 300) {
+      const yRpx = y * (750 / windowWidth);
+      // 打印调试信息
+      console.log(yRpx, heightRpx);
+      // 判断 yRpx 是否在指定范围内
+      if (yRpx > 200 && yRpx < heightRpx - 320) {
         this.setData({
-          top: y * (750 / wx.getSystemInfoSync().windowWidth),
+          top: yRpx,
         });
       }
     },
