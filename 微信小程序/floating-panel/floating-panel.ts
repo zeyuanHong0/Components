@@ -56,8 +56,6 @@ Component({
       // 计算 Y 轴的偏移量
       const y = touch.clientY - this.data.fTop;
       const yRpx = y * (750 / windowWidth);
-      // 打印调试信息
-      console.log(yRpx, heightRpx);
       // 判断 yRpx 是否在指定范围内
       if (yRpx > 200 && yRpx < heightRpx - 320) {
         this.setData({
