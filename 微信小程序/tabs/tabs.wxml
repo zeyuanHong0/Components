@@ -1,0 +1,9 @@
+<!--components/tabs/tabs.wxml-->
+<view class="swiper-tab">
+	<block wx:for="{{ tabs }}" wx:key="index">
+		<view class="swiper-tab-item" data-current="{{ index }}" bindtap="swichNav" style="width: {{ tabWidth }}%;">
+			<view class="tab-title tab-title{{ index}} {{ currentTab == index ? 'active' : '' }}" data-current="{{ index }}">{{item}}</view>
+		</view>
+	</block>
+	<view class="underline" style="left: {{ underlineLeft }}rpx; width: {{ underlineWidth }}rpx;"></view>
+</view>

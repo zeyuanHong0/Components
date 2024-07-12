@@ -1,0 +1,33 @@
+/* components/tabs/tabs.wxss */
+.swiper-tab {
+    height: 64rpx;
+    position: relative;
+
+    .swiper-tab-item {
+        display: inline-block;
+        text-align: center;
+
+        .tab-title {
+            color: #836666;
+            font-size: 30rpx;
+            display: inline-block;
+            box-sizing: border-box;
+            padding-bottom: 12rpx;
+        }
+
+        .tab-title.active {
+            font-weight: bold;
+            color: #242424;
+        }
+    }
+
+    .underline {
+        position: absolute;
+        bottom: 0;
+        height: 6rpx;
+        background-color: #d10000;
+        transition:
+            left 0.3s,
+            width 0.3s;
+    }
+}
