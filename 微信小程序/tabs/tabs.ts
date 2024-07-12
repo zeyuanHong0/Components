@@ -11,6 +11,23 @@ Component({
         this.updateTabWidth(newVal.length);
       },
     },
+    activeColor: {
+      type: String,
+      value: "#000",
+    },
+    inactiveColor: {
+      type: String,
+      value: "rgb(97, 98, 98)",
+    },
+    underlineColor: {
+      type: String,
+      value: "rgb(87, 123, 239)",
+    },
+    offset: {
+      // 组件距离视口左边的距离 单位rpx
+      type: Number,
+      value: 0,
+    },
   },
 
   /**
@@ -41,7 +58,7 @@ Component({
       query
         .select(`.tab-title${current}`)
         .boundingClientRect((rect) => {
-          const offset = 24 * (windowWidth / 750);
+          const offset = this.data.offset * (windowWidth / 750);
           this.setData({
             underlineLeft: (rect.left - offset) * (750 / windowWidth),
             underlineWidth: rect.width * (750 / windowWidth),

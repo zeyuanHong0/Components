@@ -8,7 +8,6 @@
         text-align: center;
 
         .tab-title {
-            color: #836666;
             font-size: 30rpx;
             display: inline-block;
             box-sizing: border-box;
@@ -17,7 +16,6 @@
 
         .tab-title.active {
             font-weight: bold;
-            color: #242424;
         }
     }
 
@@ -25,7 +23,6 @@
         position: absolute;
         bottom: 0;
         height: 6rpx;
-        background-color: #d10000;
         transition:
             left 0.3s,
             width 0.3s;

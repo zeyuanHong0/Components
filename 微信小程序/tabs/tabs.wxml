@@ -2,8 +2,26 @@
 <view class="swiper-tab">
 	<block wx:for="{{ tabs }}" wx:key="index">
 		<view class="swiper-tab-item" data-current="{{ index }}" bindtap="swichNav" style="width: {{ tabWidth }}%;">
-			<view class="tab-title tab-title{{ index}} {{ currentTab == index ? 'active' : '' }}" data-current="{{ index }}">{{item}}</view>
+			<view
+				class="tab-title tab-title{{ index}} {{ currentTab == index ? 'active' : '' }}"
+				data-current="{{ index }}"
+				style="color: {{ currentTab == index ? activeColor : inactiveColor }}"
+			>{{item}}</view>
 		</view>
 	</block>
-	<view class="underline" style="left: {{ underlineLeft }}rpx; width: {{ underlineWidth }}rpx;"></view>
+	<view class="underline" style="background:{{ underlineColor}};left: {{ underlineLeft }}rpx; width: {{ underlineWidth }}rpx;"></view>
 </view>
+<!-- page使用 -->
+<!-- <tabs
+	tabs="{{ tabList }}"
+	activeColor="#242424"
+	inactiveColor="#836666"
+	underlineColor="#d10000"
+	offset="24"
+	bind:clickTab="handleClickTab"
+/>
+tabList: ["待反馈", "已反馈"],
+handleClickTab(e: any) {
+    const { current } = e.detail; //点击的是数组第几个
+    console.log(current);
+}, -->
