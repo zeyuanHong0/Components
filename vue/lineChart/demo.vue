@@ -16,7 +16,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import LineChart from "./index.vue";
 
 const chartData = [820, 932, 901, 934, 1290, 1330, 1320];
