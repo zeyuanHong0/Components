@@ -19,7 +19,7 @@
 
 <script setup>
 import { ref } from "vue";
-import Waterfall from "./components/Waterfall/index.vue";
+import Waterfall from "./index.vue";
 
 // 随机高度
 const randomHeight = () => Math.floor(Math.random() * 200) + 100;
