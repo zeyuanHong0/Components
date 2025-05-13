@@ -25,7 +25,7 @@
 import {
   ref,
   reactive,
-  watchEffect,
+  watch,
   nextTick,
   onMounted,
   onBeforeUnmount,
@@ -93,9 +93,16 @@ function updateLayout() {
   });
 }
 
-watchEffect(() => {
-  updateLayout();
-});
+watch(
+  () => props.list,
+  () => {
+    nextTick(() => {
+      console.log("list changed");
+      updateLayout();
+    });
+  },
+  { immediate: true }
+);
 
 onMounted(() => {
   resizeObserver = new ResizeObserver(updateLayout);
