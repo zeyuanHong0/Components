@@ -1,0 +1,16 @@
+<view class="custom-tabbar">
+	<!-- 首页 tab -->
+	<view class="tab-item" bindtap="switchTab" data-path="/pages/index/index">
+		<t-icon name="{{ selectedPath === '/pages/index/index' ? 'home-filled' : 'home' }}" size="40rpx" />
+		<text class="{{ selectedPath === '/pages/index/index' ? 'tab-text-active' : '' }}">首页</text>
+	</view>
+	<!-- 中间凸起扫码按钮 -->
+	<view class="qrcode-button" bindtap="openQRCode">
+		<t-icon name="scan" size="60rpx" color="#fff" />
+	</view>
+	<!-- 我的 tab -->
+	<view class="tab-item" bindtap="switchTab" data-path="/pages/my/my">
+		<t-icon name="{{ selectedPath === '/pages/my/my' ? 'user-filled' : 'user' }}" size="40rpx" />
+		<text class="{{ selectedPath === '/pages/my/my' ? 'tab-text-active' : '' }}">我的</text>
+	</view>
+</view>

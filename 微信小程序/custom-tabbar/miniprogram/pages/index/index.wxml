@@ -1,0 +1,7 @@
+<!--pages/index/index.wxml-->
+<view class="page">
+	<view class="word">测试测试</view>
+	<view class="word">12312312312312312312</view>
+	<view class="word">12312312312312312312</view>
+</view>
+<custom-tabbar />

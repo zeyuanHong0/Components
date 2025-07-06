@@ -1,0 +1,18 @@
+/* pages/index/index.wxss */
+@import "../../variables.scss";
+.page {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 0 $tabbar-page-padding-bottom 0;
+    box-sizing: border-box;
+    background: #bfa;
+    overflow-y: auto;
+}
+
+.word {
+    font-size: 50rpx;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 450rpx;
+}

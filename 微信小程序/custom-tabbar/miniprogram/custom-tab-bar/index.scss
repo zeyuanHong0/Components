@@ -1,0 +1,44 @@
+@import "../variables.scss";
+.custom-tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $tabbar-height;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; /* 为了图标文字布局 */
+  padding-bottom: 20rpx; /* 内边距更美观 */
+  z-index: 1000;
+  box-shadow: 0 -1rpx 10rpx rgba(0, 0, 0, 0.05);
+  pointer-events: auto;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rpx;
+}
+
+.tab-text-active {
+  color: #0088ff;
+}
+
+.qrcode-button {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #0088ff;
+  border-radius: 60rpx;
+  position: relative;
+  top: -30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+}
